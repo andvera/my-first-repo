@@ -1,6 +1,3 @@
-#!/usr/bin/env bash
-# File: guessinggame.sh
-
 function toobig {
   echo "The number you entered is too big"
 }
@@ -23,4 +20,3 @@ do
   fi
 done
 echo "Congrads! Your guess is correct!"
-
