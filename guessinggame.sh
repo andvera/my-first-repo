@@ -1,5 +1,12 @@
 #!/usr/bin/env bash
 # File: guessinggame.sh
+
+function toobig {
+  echo "The number you entered is too big"
+}
+function toosmall {
+  echo "The number you entered is too small"
+}
 num=$(ls | wc -l)
 response=-1 
 while [[ $response -ne num ]]
@@ -9,11 +16,11 @@ do
   let response=$r
   if [[ $response -lt $num ]]
   then 
-    echo "$response is too small"
+    toosmall
   elif [[ $response -gt $num ]]
   then  
-    echo "$response is too big"
+    toobig
   fi
 done
-
 echo "Congrads! Your guess is correct!"
+
